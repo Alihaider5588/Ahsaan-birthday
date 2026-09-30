@@ -1,603 +1,633 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ur" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>My-Potfolio</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-NjHoCx+q7gM58K2JPw6hdCeUe0beSlo87VtK4rkMB9a8VgB3QTP6F5Q3RxM2DkxQ4vWSo7lWyAe2dDiP7pB0bw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
- 
- 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Ahsaan Bhai! 🎉 | Ali Haider</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="birthday.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 
-<body class="index-page">
+<body>
 
-  <header id="header" class="header d-flex flex-column justify-content-center">
+  <!-- Floating animated background elements -->
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+  <div class="particles" id="particles"></div>
 
-    <i class="header-toggle d-xl-none bi bi-list"></i>
+  <!-- Music toggle button -->
+  <div class="music-toggle" id="musicToggle" title="Play background party beat">
+    <i class="fa-solid fa-volume-xmark" id="musicIcon"></i>
+    <span class="music-text">Music</span>
+  </div>
 
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i><span>About me</span></a></li>
-        <li><a href="#skills"><i class="bi bi-tools"></i><span>Expertise</span></a></li>
-        <li><a href="#portfolio"><i class="bi bi-briefcase"></i><span>My Portfolio</span></a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>My Resume</span></a></li>
-        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i><span>My Services</span></a></li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact Me</span></a></li>
-      </ul>
-    </nav>
+  <div class="container">
+    <!-- Progress Indicator / Timeline Pills -->
+    <div class="timeline-indicator" id="timelineBar">
+      <div class="indicator-step active" data-step="0"><i class="fa-solid fa-mosque"></i><span>2010-12</span></div>
+      <div class="indicator-step" data-step="1"><i class="fa-solid fa-car-burst"></i><span>2020</span></div>
+      <div class="indicator-step" data-step="2"><i class="fa-solid fa-mask"></i><span>18 Oct</span></div>
+      <div class="indicator-step" data-step="3"><i class="fa-solid fa-tree"></i><span>19 Oct</span></div>
+      <div class="indicator-step" data-step="4"><i class="fa-solid fa-heart-crack"></i><span>Galti</span></div>
+      <div class="indicator-step" data-step="5"><i class="fa-solid fa-clock-rotate-left"></i><span>2021-26</span></div>
+      <div class="indicator-step" data-step="6"><i class="fa-solid fa-fire"></i><span>Aug 26</span></div>
+      <div class="indicator-step" data-step="7"><i class="fa-solid fa-envelope-open-text"></i><span>7 Sept</span></div>
+      <div class="indicator-step" data-step="8"><i class="fa-solid fa-cake-candles"></i><span>Birthday</span></div>
+    </div>
 
-  </header>
+    <!-- MAIN CARDS WRAPPER -->
+    <div class="cards-wrapper">
 
-  <main class="main">
+      <!-- SLIDE 0: 2010 - 2012 Pehli Mulaqat -->
+      <section class="card-slide active" id="slide-0">
+        <div class="card-top-bar">
+          <div class="card-badge">✨ Flashback: The Beginning</div>
+          <span class="slide-counter">1 / 9</span>
+        </div>
+        <h2 class="slide-title">2010 ya 2012 — Masjid Ka Nazra Aur Choti Umr 🕌</h2>
+        <div class="timeline-tag"><i class="fa-regular fa-clock"></i> Bachpan Ke Wo Sunhere Din</div>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section light-background">
+        <div class="photo-placeholder full-frame">
+          <img id="preview-0" src="images/childhood.jpg" alt="Childhood Memory"
+            onerror="this.src='https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=800&q=80'">
+        </div>
 
-      <img src="assets/img/hero-bg.png" alt="">
-
-      <div class="container" data-aos="zoom-out">
-        <div class="row justify-content-center">
-          <div class="col-lg-9">
-            <h2>ALI ZAIN</h2>
-            <p>I'm <span class="typed" data-typed-items="Social Meida Marketing Manager,Content Creator,  Freelancer ">Designer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
-            <div class="social-links">
-             
-              <a href="https://web.facebook.com/zentistoofficial" target="_blank"><i class="bi bi-facebook"></i></a>
-              <a href="https://wa.me/923053006047" target="_blank"><i class="bi bi-whatsapp"></i></a>
-
-              
+        <div class="story-content">
+          <p>
+            Yaad hai Ahsaan bhai? <strong>2010 ya 2012</strong> ke aas paas ki baat hai, tab hum dono bohot masoom aur chhote thay!
+            Exact date to kisi ko yaad nahi, par wo din aaj bhi taaza hain jab hum <strong>Masjid mein Nazra</strong>
+            parhne jate thay — gale mein tasbeeh, sar pe topi, aur dimag mein shaitaniyan! 😇😂
+          </p>
+          <div class="quote-box">
+            "Wahan se shuru hui thi Ali Haider aur Ahsaan ki ye dosti... Pehle thori hichkichaahat, phir baat cheet, aur phir aisi pakki yaari jo saalon baad bhi koi nahi tor saka!" ❤️✨
           </div>
+          <p class="highlight-text">
+            "Puri masjid mein qari sahab se bachte bachte dosti kab bhaiyon jaisi ban gayi, pata hi nahi chala! Tab kya pata tha k ye chhota sa Ahsaan itna bada 'bewafa' niklega 😂❤️"
+          </p>
+          <div class="final-touch-box">
+            <span class="final-touch-badge"><i class="fa-solid fa-stamp"></i> Final Touch</span>
+            <p><strong>Verdict 2010:</strong> Dosti masjid ke farsh se shuru hui thi, ek tasbeeh aur do shaitaan! Tab kisi ko nahi pata tha aage chal ke Ahsaan itna bada kaand karega! 😇😂</p>
           </div>
         </div>
-      </div>
 
-    </section><!-- /Hero Section -->
-
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>About ME</h2>
-        <p>I help brands grow through impactful content and strategic social media marketing. As a Social Media Marketing Manager and Content Creator, I design campaigns that connect with audiences, drive engagement, and turn attention into action.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <img src="assets/img/profile-img.jpeg" class="img-fluid" alt="">
+        <div class="question-box">
+          <p class="question-title">Kya ye masoom bachpan yaad hai? Aage barhein? 😉</p>
+          <div class="btn-group">
+            <button class="btn btn-yes" onclick="nextSlide(1)">Haan Yaar, Aage Chal! 🚀</button>
+            <button class="btn btn-no runaway-btn">Nahi Bhool Gaya 😂</button>
           </div>
-          <div class="col-lg-8 content">
-            <h2>Personal Info</h2>
-            <p class="fst-italic py-3">
-I am a dedicated and detail-oriented Social Media Marketing Manager and Content Creator, known for consistently delivering high-quality results. I focus on continuous learning and improvement to stay aligned with evolving digital trends and platform best practices.            </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>27 july 2005</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span><a href="https://alizain.netlify.app/" target="_blank">www.alizain.com</a></span></li>
+        </div>
+      </section>
 
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+92 3287451530</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Okara,Punjab</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>21</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>BSCS (Computer Science) — Ongoing
-</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>zentistoofficial@gmail.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
-                </ul>
+      <!-- SLIDE 1: 2020 Accident & Bakchodi Shuru -->
+      <section class="card-slide" id="slide-1">
+        <div class="card-top-bar">
+          <div class="card-badge">⚡ Turning Point: 2020</div>
+          <span class="slide-counter">2 / 9</span>
+        </div>
+        <h2 class="slide-title">2020 — Accident Aur Full Bakchodi Mode On! 💥</h2>
+        <div class="timeline-tag"><i class="fa-solid fa-car-burst"></i> Dosti Next Level Par</div>
+
+        <div class="photo-placeholder full-frame">
+          <img id="preview-1" src="images/friends_2020.jpg" alt="2020 Memories"
+            onerror="this.src='https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80'">
+        </div>
+
+        <div class="story-content">
+          <p>
+            Phir saal 2020 aya... Jab hamary ek dost ka <strong>accident</strong> hua. Us mushkil waqt mein hospital ki parchi se lekar medicine lene tak, hum dono kandhe se kandha mila kar sath kharay rahay! 🏥🤝
+          </p>
+          <div class="quote-box">
+            "Kehte hain dost wo hota hai jo mushkil mein pehle pohanche. Us din humne ek doosray ko dost nahi, apna saga bhai maana tha! Haan haan wohi bhai jo baad mein treat se bhi mur jata hai 😂" ❤️
+          </div>
+          <p class="highlight-text">
+            Aur wahan se shuru hui hamari <strong>Full Bakchodi Life!</strong> Jahan Ahsaan wahan Ali Haider, aur jahan Ali Haider wahan koi na koi toofaan! 😈🔥<br>
+            <em>"Hospital se nikle aur seedha mischief mode ON!"</em> 🚀
+          </p>
+          <div class="final-touch-box">
+            <span class="final-touch-badge"><i class="fa-solid fa-notes-medical"></i> Final Touch</span>
+            <p><strong>Hospital Record 2020:</strong> Jab tak dost ki taang theek nahi hui, hospital mein chai-parathay Ali Haider ne supply kiye! Saga bhai protocol active! ☕🥖</p>
+          </div>
+        </div>
+
+        <div class="question-box">
+          <p class="question-title">Kyun yaad aya 2020 ka wo daur? Dekhein agla kaand? 😂</p>
+          <div class="btn-group">
+            <button class="btn btn-yes" onclick="nextSlide(2)">Beshak, Dikha Kaand! 🔥</button>
+            <button class="btn btn-no runaway-btn">Rehn De Bhai 😜</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 2: 18-10-2020 Sahiwal Kaand -->
+      <section class="card-slide" id="slide-2">
+        <div class="card-top-bar">
+          <div class="card-badge">🚨 Kaand No. 1: Sahiwal Special</div>
+          <span class="slide-counter">3 / 9</span>
+        </div>
+        <h2 class="slide-title">18-10-2020 (Dupahar 2:00 Baje) — Sahiwal Mein Bakchodi! 🏙️</h2>
+        <div class="timeline-tag"><i class="fa-solid fa-calendar-day"></i> 18 October 2020 | ~2:00 PM</div>
+
+        <div class="photo-placeholder full-frame">
+          <img id="preview-2" src="images/sahiwal_scene.jpg" alt="Sahiwal Scene"
+            onerror="this.src='https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80'">
+        </div>
+
+        <div class="story-content">
+          <p>
+            <strong>18 October 2020, dupahar ke theek 2 bajay!</strong><br>
+            Sahiwal city mein Ahsaan miyan ne aisa zabardast kaand aur hungama khara kiya... Magar ustaad ki hoshiyari aur scheme check karo!
+          </p>
+          <div class="quote-box">
+            "Kaam Ahsaan ka tha... Panga Ahsaan ka tha... Magar phansaaya kisay? Name kis ka lagaya? <strong>Ali Haider ka!</strong> 😂<br>
+            Matlab sharafat meri aur badnaami bhi meri! Aaj tak log puchte hain k Ali bhai ye kia tha?!" 🤦‍♂️🤣
+          </div>
+          <p class="highlight-text">
+            "Magar sach to ye hai bhai, agar tere liye naam na lagwata to dost kaisa hota!" 😎❤️
+          </p>
+          <div class="final-touch-box">
+            <span class="final-touch-badge"><i class="fa-solid fa-shield-halved"></i> Final Touch</span>
+            <p><strong>Sahiwal Police Record:</strong> Kaand Ahsaan ka, badnaami Ali Haider ki! Dosti ho to aisi, warna banda akele hi bail karwa leta hai! 🚓🤣</p>
+          </div>
+        </div>
+
+        <div class="question-box">
+          <p class="question-title">Sach bata Ahsaan, mera hi naam lena zaroori tha na? 🤣</p>
+          <div class="btn-group">
+            <button class="btn btn-yes" onclick="nextSlide(3)">Agla Kaand Bhi Suno! 🏃‍♂️</button>
+            <button class="btn btn-no runaway-btn">Maine Kuch Nahi Kiya 🙈</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 3: 19-10-2020 Village Kaand -->
+      <section class="card-slide" id="slide-3">
+        <div class="card-top-bar">
+          <div class="card-badge">🌾 Kaand No. 2: Gao Ki Raat</div>
+          <span class="slide-counter">4 / 9</span>
+        </div>
+        <h2 class="slide-title">19-10-2020 (Raat 7:00 Baje) — Village / Gao Mein Scene! 🌙</h2>
+        <div class="timeline-tag"><i class="fa-solid fa-calendar-day"></i> 19 October 2020 | 7:00 PM</div>
+
+        <div class="photo-placeholder full-frame">
+          <img id="preview-3" src="images/village_scene.jpg" alt="Village Scene"
+            onerror="this.src='https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80'">
+        </div>
+
+        <div class="story-content">
+          <p>
+            Abhi Sahiwal ka dhuwan thanda nahi hua tha ke agle hi din <strong>19 October 2020, raat ke 7 bajay</strong>
+            hamare pyare gao (village) mein phir se ek nayi film chali!
+          </p>
+          <div class="quote-box">
+            "Aur guess what? Phir se mera hi naam aagay! 😂 Matlab official brand ambassador ban chuka tha Ali Haider tere har pange ka! Aaj bhi CV mein likhta hoon — <strong>'Ahsaan ke pangeon ka PR Manager'</strong>" 🕶️
+          </div>
+          <p class="highlight-text">
+            "Pura gao so raha tha magar hamari planning aur shararatein 24/7 on rehti theen! Murgiyan bhi jag gayi theen! 🐔" 🚜✨
+          </p>
+          <div class="final-touch-box">
+            <span class="final-touch-badge"><i class="fa-solid fa-tractor"></i> Final Touch</span>
+            <p><strong>Village Record:</strong> Raat theek 7 baje poora pind so raha tha, aur hum dono secret missions chala rahe thay! Awaz thori kam, hasi zyada! 🌾🔦</p>
+          </div>
+        </div>
+
+        <div class="question-box">
+          <p class="question-title">Maan gaya na ustaad? Aage chalain? 🤝</p>
+          <div class="btn-group">
+            <button class="btn btn-yes" onclick="nextSlide(4)">Haan Bhai Aage Chalo! ⚡</button>
+            <button class="btn btn-no runaway-btn">Pakray Gaye Yaar 🏃‍♂️</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 4: October 2020 - Galti Insaan Se Hoti Hai -->
+      <section class="card-slide" id="slide-4">
+        <div class="card-top-bar">
+          <div class="card-badge">❤️ Sachhi Dosti: Mafiyan Aur Pyar</div>
+          <span class="slide-counter">5 / 9</span>
+        </div>
+        <h2 class="slide-title">October 2020 — Galti Insaan Se Hi Hoti Hai 🫂</h2>
+        <div class="timeline-tag"><i class="fa-solid fa-hands-holding-circle"></i> Pure Friendship Bond</div>
+
+        <!-- Slide 4: Galti Tab with 2 real photos (Dosti ka mashwara & raat ka scene) -->
+        <div class="photo-grid-two">
+          <div class="photo-placeholder full-frame">
+            <img src="images/galti_2.jpg" alt="Dosti Ka Samjhauta">
+          </div>
+          <div class="photo-placeholder full-frame">
+            <img src="images/sept7_scene.jpg" alt="Gao Ki Raat Ka Scene">
+          </div>
+        </div>
+
+        <div class="story-content">
+          <p>
+            October 2020 ke dauran hamare Ahsaan miyan se ek nanhi munhi <strong>galti</strong> ho gayi thi... Par scene clear hai: <strong>Na koi larai hui thi, na koi dushmani!</strong> 🙅‍♂️😂
+          </p>
+          <div class="quote-box">
+            "Sirf bachpan ki nadani aur thori si masoom shaitani thi! Aur ustaad, ghaltiyan to doston aur bhaiyon se hi hoti hain, farishton se to nahi! Agar dosti mein aisi choti moti baatein na hon to phir dosti boring nahi ho jati? 😉🔥"
+          </div>
+          <p class="highlight-golden">
+            "Sachi baat ye hai k jo dosti dil se ho, usme koi gila shikwa tik hi nahi sakta! Saal 2021 aane se pehle hi sab mamlaat hasi mazaak mein hawa ho gaye aur yaari pehle se bhi dugni pakki ho gayi!" 🤝❤️
+          </p>
+          <div class="final-touch-box">
+            <span class="final-touch-badge"><i class="fa-solid fa-heart-circle-check"></i> Final Touch</span>
+            <p><strong>Supreme Court Ka Faisla:</strong> Bachpan ki nadani thi, koi dushmani nahi! Doston se hi to galtiyan hoti hain, aur asli dost dil mein baat nahi rakhtay! 🫂⚖️</p>
+          </div>
+        </div>
+
+        <div class="question-box">
+          <p class="question-title">Sach bata, doston mein aisi galtiyan maaf hoti hain na? ❤️😂</p>
+          <div class="btn-group">
+            <button class="btn btn-yes" onclick="nextSlide(5)">Bilkul Nahi, Dil Saaf! ❤️</button>
+            <button class="btn btn-no runaway-btn">Hota Hai Bhai 😂</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 5: 2021 to July 2026 - Dua Salaam Phase -->
+      <section class="card-slide" id="slide-5">
+        <div class="card-top-bar">
+          <div class="card-badge">⏳ 2021 Se July 2026 Ka Safar</div>
+          <span class="slide-counter">6 / 9</span>
+        </div>
+        <h2 class="slide-title">2021 Se July 2026 — Dua Salaam Aur Zindagi Ki Masroofiyat 🛣️</h2>
+        <div class="timeline-tag"><i class="fa-solid fa-hourglass-half"></i> Khamosh Magar Pakki Dosti</div>
+
+        <!-- Funny Missing Photo Notice Box -->
+        <div class="funny-missing-photo-box">
+          <div class="funny-icon">📸🕵️‍♂️</div>
+          <h4>Cameraman Masroofiyat Ki Waja Se Gayab Tha! 😂</h4>
+          <p>
+            "2021 se 2026 ke darmiyan hum itnay masroof thay k photo lena hi bhool gaye! <br>
+            Aamne saamne bas <em>'Aur bhai kaisa hai, theek thak?'</em> bol kar dono apne apne kamon pe nikal jatay thay!" 🏃‍♂️💨
+          </p>
+          <span class="funny-pill">⚠️ Saboot Missing Magar Dosti Full Active!</span>
+        </div>
+
+        <div class="story-content">
+          <p>
+            2021 ke baad zindagi ki daur dhoop shuru hui... Career, zimmadariyan aur masroofiyat! July 2026 tak hum aksar bas aamne saamne mil kar <strong>dua salaam</strong> tak rehte thay.
+          </p>
+          <div class="quote-box">
+            "Log kehte hain faasle dosti kam kar dete hain... Magar unhein kya pata, jinki neev (foundation) bachpan ki masjid se judi ho, wo faaslon ke mohtaaj nahi hote! Haan phone pe balance khatam zaroor ho jata tha 😂" 🕊️
+          </div>
+          <p class="highlight-text">
+            Dua hamesha dil se nikalti rahi Ahsaan bhai ke liye, chahe mulaqaat roz ho ya mahinon baad! <br>
+            <em>"Dooriyan zyada theen magar dil ke faasle zero thay — ye alag baat k OTP ka jawab nahi deta tha! 📵😤"</em>
+          </p>
+          <div class="final-touch-box">
+            <span class="final-touch-badge"><i class="fa-solid fa-signal"></i> Final Touch</span>
+            <p><strong>Network Signal Test:</strong> 5 saal selfie nahi li, magar dil ke taar hamesha 5G rahay! Ek call pe dono bhai bina filter ke hazir! 📶❤️</p>
+          </div>
+        </div>
+
+        <div class="question-box">
+          <p class="question-title">Phir August 2026 ka dhamakedar comeback dekhna hai? 💣</p>
+          <div class="btn-group">
+            <button class="btn btn-yes" onclick="nextSlide(6)">Haan, Comeback Dikhao! 🔥</button>
+            <button class="btn btn-no runaway-btn">Nahi Rehn Do 😴</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 6: August 2026 - Comeback of Bakchodi -->
+      <section class="card-slide" id="slide-6">
+        <div class="card-top-bar">
+          <div class="card-badge">🚀 The Epic Comeback</div>
+          <span class="slide-counter">7 / 9</span>
+        </div>
+        <h2 class="slide-title">August 2026 — Purany Din Aur Wohi Full Bakchodi Wapas! 🔥</h2>
+        <div class="timeline-tag"><i class="fa-solid fa-bolt"></i> August 2026 | Reunion</div>
+
+        <!-- Funny Missing Photo Notice Box -->
+        <div class="funny-missing-photo-box">
+          <div class="funny-icon">⚡🎉</div>
+          <h4>Pic Khainchna Bhool Gaye, Bakchodi Zyada Thi! 🤣</h4>
+          <p>
+            "August 2026 mein jab dobara regular calls aur baatein shuru hueen, toh has has ke bura haal tha! <br>
+            Itni hansi mein photo ka hosh kisko hota hai bhai?!" 🤷‍♂️🔥
+          </p>
+          <span class="funny-pill">🔥 100% Pure Non-Stop Bakchodi Reloaded</span>
+        </div>
+
+        <div class="story-content">
+          <p>
+            August 2026 mein achanak hamari dobara regular gupshup aur calls shuru hueen! Jaise koi game ka naya season release hua ho! 🎮
+          </p>
+          <div class="quote-box">
+            "Aur ek second mein aisa laga jaise beech ke 5-6 saal guzray hi nahi thay! Wohi purany tehhaqay, wohi purani baatein aur wohi full bakchodi 2.0 version mein wapas active! WiFi reconnect hone mein 5 saal lag gaye lekin signal full aaya! 📶" 💥😂
+          </div>
+          <p class="highlight-text">
+            "Kyun k legends kabhi change nahi hotay, bas reload ho kar aatay hain! Update mein thora time lagta hai! ⏳" 👑😎
+          </p>
+          <div class="final-touch-box">
+            <span class="final-touch-badge"><i class="fa-solid fa-arrows-rotate"></i> Final Touch</span>
+            <p><strong>System Reloaded:</strong> 5 saal baad bhi software wahi purana! Dil wahi, dosti wahi, aur bakchodi wahi 2.0 version mein full speed! 🚀🔥</p>
+          </div>
+        </div>
+
+        <div class="question-box">
+          <p class="question-title">Is dosti ki koi misaal hai? Agli aham tareekh dekhein? 👑</p>
+          <div class="btn-group">
+            <button class="btn btn-yes" onclick="nextSlide(7)">Agli Tareekh Dikha! 📅</button>
+            <button class="btn btn-no runaway-btn">Koi Misaal Nahi 🙅‍♂️</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 7: 7 September 2026 - Sham 6:25 -->
+      <section class="card-slide" id="slide-7">
+        <div class="card-top-bar">
+          <div class="card-badge">💔 Bewafai Special: The Big Khulasa 😂</div>
+          <span class="slide-counter">8 / 9</span>
+        </div>
+        <h2 class="slide-title">7 September 2026 (Sham 6:25) — Bewafa Nikla Ustaad! 💔😂</h2>
+        <div class="timeline-tag"><i class="fa-regular fa-clock"></i> 7 September 2026 | 6:25 PM The Incident</div>
+
+        <div class="photo-placeholder full-frame">
+          <img id="preview-7" src="images/sept7_office.jpg" alt="7 September Ka Scene"
+            onerror="this.src='images/galti_1.jpg'">
+        </div>
+
+        <div class="story-content">
+          <p>
+            <strong>7 September 2026 ko shaam theek 6:25 par</strong>, Ahsaan aur bhabhi ne mil kar mujhe ek bohot hi dukhi khabar sunaayi... Aisi dukhi khabar ke sun kar dil ke 32 tukray ho gaye! 💔🥺😂
+          </p>
+          <div class="quote-box" style="border-left: 4px solid #ef4444; background: rgba(239, 68, 68, 0.08);">
+            "Dekho <strong>bhabhi ki to khair hai</strong>, bhabhi hamari behen jaisi hain, unko 100 khoon maaf hain! 🌸🙌<br>
+            <strong>Magar Ahsaan... Tumnay mere liye kya kiya?! 😤💔</strong><br>
+            Tu to seedha seedha <em>'Bewafa'</em> nikla ustaad! Itnay saalon ki dosti ka ye sila diya tune?! Acha bhala saga bhai maana tha aur tu ne beech raste mein bewafai kar di! 😂🤦‍♂️"
+          </div>
+          <p class="highlight-golden">
+            "Chal koi nahi ustaad... <strong>Magar hum nahi hain na!</strong> 😎❤️ Hum tere jaise thori hain k peechay hatt jayein!<br>
+            Agar kabhi <strong>tere sath aisa hota nazar aya</strong>, ya kisi ne tere sath aisi bewafai ki koshish ki... <strong>phir dekhna Ali Haider tere sath kaise khara hota hai!</strong> Danda le ke pehle number pe pohanchon ga! 👊🔥"
+          </p>
+          <div class="quote-box">
+            "Suno Ahsaan miyan: Dunya mein WiFi, mausam, mehengai sab bewafa ho saktay hain... Magar tera ye bhai Ali Haider? Ye to wo Nokia 3310 hai jo lifetime on rehta hai! 📱💪 Chahe tu kitna bhi bewafa ban ja, dosti hamari qayamat tak A1 hi rahay gi! 🫂😂"
+          </div>
+          <div class="final-touch-box">
+            <span class="final-touch-badge"><i class="fa-solid fa-heart-crack"></i> Final Touch</span>
+            <p><strong>Bewafai Ka Verdict:</strong> Bewafa to tu hai Ahsaan, magar teri bewafai bhi hasi hasi mein qubool hai! Bas ab birthday treat se bewafai na karna warna chittar parade tayyar hai! 🍕🏏😂</p>
+          </div>
+        </div>
+
+        <div class="question-box">
+          <p class="question-title">Bewafai ka hisaab baad mein hoga, pehle birthday grand surprise dekh! 🎂😜</p>
+          <div class="btn-group">
+            <button class="btn btn-yes" onclick="nextSlide(8)">Surprise Kholo Bhai! 🎁</button>
+            <button class="btn btn-no runaway-btn">Abhi Nahi 🙈</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 8: 1 October 2026 - GRAND BIRTHDAY WISH & TREAT -->
+      <section class="card-slide" id="slide-8">
+        <div class="card-top-bar">
+          <div class="card-badge pulse-badge">🎂 HAPPY BIRTHDAY AHSAAN! 🎂</div>
+          <span class="slide-counter gold-counter">9 / 9 (Grand Finale)</span>
+        </div>
+        <h1 class="grand-birthday-title">HAPPY BIRTHDAY MERAY JAAN, AHSAAN! 👑🎉</h1>
+        <div class="timeline-tag gold-tag"><i class="fa-solid fa-cake-candles"></i> 1 October 2026 | The Big Day!</div>
+
+        <!-- Birthday Hero: Ahsaan Funny Photo Gallery (4 pics in 2x2 grid) -->
+        <div class="birthday-photo-gallery">
+          <div class="bday-photo-card" onclick="openLightbox(this)" title="Click to view full photo">
+            <div class="bday-photo-frame">
+              <img src="images/ahsaan_birthday.jpg" alt="Ahsaan College Time">
+            </div>
+            <div class="bday-photo-caption">
+              <span class="caption-emoji">😎</span>
+              <p>"College ke din... jab haazri lagwanay ki jagah selfie lagwata tha!" 📚🤳</p>
+            </div>
+          </div>
+          <div class="bday-photo-card" onclick="openLightbox(this)" title="Click to view full photo">
+            <div class="bday-photo-frame">
+              <img src="images/ahsaan_hero_2.jpg" alt="Ahsaan Sharp Look">
+            </div>
+            <div class="bday-photo-caption">
+              <span class="caption-emoji">🔥</span>
+              <p>"Model banna chahta tha, bana kya? Dost ka bewafa! 💼😂"</p>
+            </div>
+          </div>
+          <div class="bday-photo-card" onclick="openLightbox(this)" title="Click to view full photo">
+            <div class="bday-photo-frame">
+              <img src="images/ahsaan_hero_3.jpg" alt="Ahsaan Thinking Pose">
+            </div>
+            <div class="bday-photo-caption">
+              <span class="caption-emoji">🤔</span>
+              <p>"Soch raha hai treat du ya bhaag jaun... Bhai bhagna mat, deni hai! 🍕💸"</p>
+            </div>
+          </div>
+          <div class="bday-photo-card" onclick="openLightbox(this)" title="Click to view full photo">
+            <div class="bday-photo-frame">
+              <img src="images/ahsaan_hero_4.jpg" alt="Ahsaan Blue Kurta">
+            </div>
+            <div class="bday-photo-caption">
+              <span class="caption-emoji">👑</span>
+              <p>"Kurta pehen ke maulana ban raha hai, treat ka sawaal sun ke bhag jaata hai! 😤😂"</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="birthday-card-message">
+          <div class="bday-shayari">
+            "Har saal aaye teri zindagi mein ye din hazar baar,<br>
+            Kamyabiyan choomein qadam, mile be-panah pyar!<br>
+            2010 ki masjid se shuru hui thi ye dosti hamari,<br>
+            Ta-umr salamat rahe ye bhaiyon jaisi yaari!" ❤️🎂
+          </div>
+
+          <p class="birthday-wishes-para">
+            Meri taraf se tujhe zindagi ki har khushi, lambi umar, sehat aur dher saari kamyabi mubarak ho.
+            Tu sirf dost nahi, mera sacha bhai hai!
+          </p>
+          <div class="from-tag">— Tera Bhai, <strong>Ali Haider</strong> 🤝</div>
+        </div>
+
+        <!-- THE ULTIMATE BIRTHDAY TREAT QUESTION BOX -->
+        <div class="treat-challenge-box" id="treatBox">
+          <div class="treat-badge"><i class="fa-solid fa-utensils"></i> THE MILLION DOLLAR QUESTION</div>
+          <h3 class="treat-title">Ab Batao Ahsaan Bhai, Birthday Treat Daini Ha Ya Nahi? 🍕🍔🍗</h3>
+          <p class="treat-sub">Soch samajh ke faisla karna... 'Nahi' ka option waise bhi kaam nahi karega! 😂</p>
+
+          <div class="btn-group treat-buttons">
+            <button class="btn btn-treat-yes" onclick="celebrateTreat()">
+              <i class="fa-solid fa-pizza-slice"></i> HAAN BHAI, FULL TREAT CONFIRM HAI! 😋🎉
+            </button>
+            <button class="btn btn-treat-no runaway-btn" id="treatNoBtn">
+              <i class="fa-solid fa-ban"></i> Nahi Daini! 🏃‍♂️💨
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 2: RESTAURANT SELECTION (OKARA FAMOUS SPOTS) -->
+        <div class="okara-treat-flow" id="okaraSelectionBox">
+          <div class="treat-step-header">
+            <span class="step-pill">Stage 1 of 2: Location Final karo</span>
+            <h3 class="flow-title">Shabaash! Ab Batao Okara Mein Kahan Khila Rahay Ho? 🍽️🔥</h3>
+            <p class="flow-subtitle">Option select karo warna bill double kar diya jayega! 😂</p>
+          </div>
+
+          <div class="restaurants-grid">
+            <!-- Restaurant 1 -->
+            <div class="restaurant-card" onclick="selectRestaurant('BFC (Best Food / Fried Chicken) Okara', 'Crispy Burger, Broast & Loaded Fries 🍗🍟')">
+              <div class="rest-badge">Crispy & Fast Food</div>
+              <div class="rest-icon">🍔</div>
+              <h4 class="rest-name">BFC Okara</h4>
+              <p class="rest-desc">Crunchy Zinger, Juicy Broast & Loaded Fries</p>
+              <div class="rest-vibe">"Jahan ka fry sab se heavy ho!"</div>
+            </div>
+
+            <!-- Restaurant 2 -->
+            <div class="restaurant-card" onclick="selectRestaurant('Al-Baik / OPTP style Fast Food', 'Burgers, Wings & Cheesy Pizza 🍕')">
+              <div class="rest-badge">Hot & Cheesy</div>
+              <div class="rest-icon">🍕</div>
+              <h4 class="rest-name">Pizza & Fast Food Hub</h4>
+              <p class="rest-desc">Extra Cheese Pizza & Peri Peri Wings</p>
+              <div class="rest-vibe">"Pet bhar kar cheese khani hai!"</div>
+            </div>
+
+            <!-- Restaurant 3 -->
+            <div class="restaurant-card" onclick="selectRestaurant('Desi Karahi & BBQ Spot (GT Road / Benazir Road)', 'Mutton Karahi, Malai Boti & Naan 🍖🔥')">
+              <div class="rest-badge">Shahi Desi Treat</div>
+              <div class="rest-icon">🍲</div>
+              <h4 class="rest-name">Desi Shinwari & BBQ</h4>
+              <p class="rest-desc">Dumba/Chicken Karahi & Makhan Naan</p>
+              <div class="rest-vibe">"Asli bhaiyon wali desi party!"</div>
+            </div>
+
+            <!-- Restaurant 4 -->
+            <div class="restaurant-card" onclick="selectRestaurant('Okara Gymkhana / Fine Dine', 'Executive Buffet & Continental Special ☕🥩')">
+              <div class="rest-badge">VIP Protocol</div>
+              <div class="rest-icon">👑</div>
+              <h4 class="rest-name">Executive / Fine Dine VIP</h4>
+              <p class="rest-desc">Full AC Hall, Royal Ambience & Dessert</p>
+              <div class="rest-vibe">"Ahsaan bhai ka VIP rutba!"</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 3: RESERVATION DETAILS & FUNNY BOOKING FORM -->
+        <div class="reservation-box" id="reservationBox">
+          <div class="treat-step-header">
+            <span class="step-pill green-pill">Stage 2 of 2: Table Book Ho Rahi Hai</span>
+            <h3 class="flow-title">Table Booking & Protocol Slip 📋✨</h3>
+            <p class="flow-subtitle">Chuninda Restaurant: <strong id="selectedRestDisplay" class="chosen-rest-name">BFC Okara</strong></p>
+          </div>
+
+          <div class="booking-form-grid">
+            <div class="form-group">
+              <label><i class="fa-solid fa-clock"></i> Treat Ka Time (Kis Waqt Pohanchna Hai?)</label>
+              <select id="treatTime" class="custom-select">
+                <option value="Dupahar 2:00 Baje (Lunch Special)">Dupahar 2:00 Baje (Full Lunch Special 🍛)</option>
+                <option value="Sham 7:00 Baje (Sunset BBQ & Chai)">Sham 7:00 Baje (Sunset BBQ & Chai ☕)</option>
+                <option value="Raat 9:30 Baje (Late Night Kaand & Feast)" selected>Raat 9:30 Baje (Late Night Feast 🌙)</option>
+                <option value="Jab Ahsaan Bhai Ki Jaib Ijazat Day 😂">Jab Ahsaan Bhai Ki Jaib Ijazat Day 😂</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label><i class="fa-solid fa-users"></i> Table Par Kaun Kaun Hoga?</label>
+              <select id="treatGuests" class="custom-select">
+                <option value="Sirf Ali Haider Aur Birthday Boy Ahsaan (Bhai Bhai VIP Table)" selected>Sirf Ali Haider + Ahsaan (Bhai Bhai Table 🤝)</option>
+                <option value="Puri Bakchodi Gang (Sab Dost)">Puri Bakchodi Gang (Sab Doston Ka Kafla 🚜)</option>
+                <option value="Jitne Zyada Utna Ahsaan Ka Nuqsaan 😂">Jitne Zyada Utna Ahsaan Ka Nuqsaan 😂</option>
+              </select>
+            </div>
+
+            <div class="form-group full-width">
+              <label><i class="fa-solid fa-wallet"></i> Bill Ka Payment Method (Sponsor Confirmation)</label>
+              <div class="sponsor-badge-display">
+                <i class="fa-solid fa-shield-halved"></i> 100% Guaranteed Sponsored by: <strong>Ahsaan Bhai (No Bahana Allowed!)</strong> 💳🔥
               </div>
             </div>
-            <p class="py-3">
-              I specialize in social media marketing and content creation, delivering freelance services focused on building strong digital presence. My primary focus is creating engaging content and managing responsive, performance-driven social media strategies that align with client goals and deliver meaningful audience experiences.
-            </p>
+          </div>
+
+          <div class="reservation-action-btn">
+            <button class="btn btn-confirm-booking" onclick="confirmReservation()">
+              <i class="fa-solid fa-clipboard-check"></i> CONFIRM RESERVATION & GENERATE SLIP 🧾🎉
+            </button>
           </div>
         </div>
 
-      </div>
-
-    </section><!-- /About Section -->
-
-  
-    <!-- Skills Section -->
-    <section id="skills" class="skills section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Expertise</h2>
-        <p>Crafting digital mastery with accuracy and creativity</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row skills-content skills-animation">
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>Social Media Marketing</span> <i class="val">91%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="91" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Social Media Manager</span> <i class="val">95%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Meta Ads</span> <i class="val">92%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
+        <!-- FINAL STEP: OFFICIAL FUNNY RESERVATION SLIP / RECEIPT -->
+        <div class="official-receipt-card" id="officialReceipt">
+          <div class="receipt-stamp">CONFIRMED & LOCKED 🔒</div>
+          <div class="receipt-header">
+            <div class="receipt-logo">🎂 OKARA FOOD PROTOCOL 🎂</div>
+            <p class="receipt-id">Booking ID: #AHSAAN-BDAY-2026</p>
           </div>
 
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>Content Planning & Scheduling</span> <i class="val">85%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Branding & Creative Strategy</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Canva</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
+          <div class="receipt-details">
+            <div class="receipt-row">
+              <span class="label">Host & Sponsor:</span>
+              <span class="val highlight-sponsor">Ahsaan Bhai (Birthday Boy 👑)</span>
+            </div>
+            <div class="receipt-row">
+              <span class="label">Chief Guest:</span>
+              <span class="val">Ali Haider (Apna Bhai ❤️)</span>
+            </div>
+            <div class="receipt-row">
+              <span class="label">Selected Venue (Okara):</span>
+              <span class="val venue-val" id="receiptVenue">BFC Okara</span>
+            </div>
+            <div class="receipt-row">
+              <span class="label">Menu Category:</span>
+              <span class="val" id="receiptMenu">Crispy Chicken & Loaded Fries</span>
+            </div>
+            <div class="receipt-row">
+              <span class="label">Timing:</span>
+              <span class="val" id="receiptTiming">Raat 9:30 Baje</span>
+            </div>
+            <div class="receipt-row">
+              <span class="label">Bill Status:</span>
+              <span class="val bill-val">Ahsaan Ki Jaib Pe Bhari Padne Wala Hai 😂💸</span>
+            </div>
           </div>
 
+          <div class="receipt-footer-funny">
+            <p>⚠️ <strong>Warning:</strong> Is booking ko cancel karne par 500% fine lagega aur ghar se utha liya jayega! 😂</p>
+          </div>
+
+          <div class="receipt-buttons">
+            <a id="whatsappShareBtn" href="#" target="_blank" class="btn btn-whatsapp">
+              <i class="fa-brands fa-whatsapp"></i> Slip WhatsApp Par Bhejo Ali Ko! 📲
+            </a>
+            <button class="btn btn-yes" onclick="fireMoreConfetti()">
+              <i class="fa-solid fa-wand-magic-sparkles"></i> Phir Se Blast Karo! 🎊
+            </button>
+          </div>
         </div>
 
-      </div>
+        <div class="restart-wrapper">
+          <button class="btn-restart" onclick="goToSlide(0)"><i class="fa-solid fa-rotate-left"></i> Phir Se Yaadein
+            Dekho</button>
+        </div>
+      </section>
 
-    </section><!-- /Skills Section -->
+    </div><!-- /cards-wrapper -->
+  </div><!-- /container -->
 
-    <section id="portfolio" class="portfolio section">
-  <!-- Section Title -->
-  <div class="container section-title aos-init" data-aos="fade-up">
-      <h2>My Portfolio</h2>
-      <p>This portfolio showcases a range of digital marketing projects, including social media campaigns, brand promotion strategies, content marketing, and analytics-driven initiatives, all designed to boost online presence and engagement.</p>
-  </div><!-- End Section Title -->
-
-  <div class="container">
-      <div class="row gy-4">
-          <div class="col-lg-4 col-md-6 aos-init" data-aos="fade-up" data-aos-delay="400">
-              <div class="card">
-                  <div class="icon1">
-                      <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                          <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,503.46388370962813C374.79870501325706,506.71871716319447,464.8034551963731,527.1746412648533,510.4981551193396,467.86667711651364C555.9287308511215,408.9015244558933,512.6030010748507,327.5744911775523,490.211057578863,256.5855673507754C471.097692560561,195.9906835881958,447.69079081568157,138.11976852964426,395.19560036434837,102.3242989838813C329.3053358748298,57.3949838291264,248.02791733380457,8.279543830951368,175.87071277845988,42.242879143198664C103.41431057327972,76.34704239035025,93.79494320519305,170.9812938413882,81.28167332365135,250.07896920659033C70.17666984294237,320.27484674793965,64.84698225790005,396.69656628748305,111.28512138212992,450.4950937839243C156.20124167950087,502.5303643271138,231.32542653798444,500.4755392045468,300,503.46388370962813"></path>
-                      </svg>
-                      <i class="bi bi-megaphone"></i> <!-- Changed icon to Megaphone for Social Media Campaigns -->
-                  </div>
-                  <h3>Social Media Management</h3>
-                  <div class="urls">
-                      <ul>
-                        <li><a href="https://web.facebook.com/zentistoofficial/" target="_blank">Zentisto Management</a></li>
-                        <li><a href="https://web.facebook.com/outsineofficial/" target="_blank">Outsine</a></li>
-                      </ul>
-                  </div>
-              </div>
-          </div><!-- portfolio Item -->
-
-          <div class="col-lg-4 col-md-6 aos-init" data-aos="fade-up" data-aos-delay="500">
-              <div class="card">
-                  <div class="icon2">
-                      <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                          <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,532.3542879108572C369.38199826031484,532.3153073249985,429.10787420159085,491.63046689027357,474.5244479745417,439.17860296908856C522.8885846962883,383.3225815378663,569.1668002868075,314.3205725914397,550.7432151929288,242.7694973846089C532.6665558377875,172.5657663291529,456.2379748765914,142.6223662098291,390.3689995646985,112.34683881706744C326.66090330228417,83.06452184765237,258.84405631176094,53.51806209861945,193.32584062364296,78.48882559362697C121.61183558270385,105.82097193414197,62.805066853699245,167.19869350419734,48.57481801355237,242.6138429142374C34.843463184063346,315.3850353017275,76.69343916112496,383.4422959591041,125.22947124332185,439.3748458443577C170.7312796277747,491.8107796887764,230.57421082200815,532.3932930995766,300,532.3542879108572"></path>
-                      </svg>
-                      <i class="bi bi-pencil-square"></i> <!-- Changed icon to Pencil for Content Marketing -->
-                  </div>
-                  <h3>Social Media Designs</h3>
-                  <div class="urls">
-                      <ul>
-                          <li><a href="designs.html" >Social Media Management and Marketing Posts</a></li>
-
-                      </ul>
-
-                  </div>
-              </div>
-          </div><!-- portfolio Item -->
-
-          <div class="col-lg-4 col-md-6 aos-init" data-aos="fade-up" data-aos-delay="600">
-              <div class="card">
-                  <div class="icon3">
-                      <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                          <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,566.797414625762C385.7384707136149,576.1784315230908,478.7894351017131,552.8928747891023,531.9192734346935,484.94944893311C584.6109503024035,417.5663521118492,582.489472248146,322.67544863468447,553.9536738515405,242.03673114598146C529.1557734026468,172.5657663291529,465.24506316201064,127.66468636344209,395.9583748389544,100.7403814666027C334.2173773831606,76.7482773500951,269.4350130405921,84.62216499799875,207.1952322260088,107.2889140133804C132.92018162631612,134.33871894543012,41.79353780512637,160.00259165414826,22.644507872594943,236.69541883565114C3.319112789854554,314.0945973066697,72.72355303640163,379.243833228382,124.04198916343866,440.3218312028393C172.9286146004772,498.5055451809895,224.45579914871206,558.5317968840102,300,566.797414625762"></path>
-                      </svg>
-                      <i class="bi bi-bar-chart-line"></i> <!-- Changed icon to Analytics for Brand Strategy -->
-                  </div>
-                  <h3>Client Reports</h3>
-                  <div class="urls">
-                     <ul>
-                        <li><a href="designs.html#pdf-view">Social Media Management Reports</a></li>
-                     </ul>
-
-                  </div>
-              </div>
-          </div><!-- End portfolio Item -->
-      </div><!-- End Row -->
-  </div><!-- End Container -->
-</section><!-- /portfolio section -->
-
-
-   <!-- Resume Section -->
-<section id="resume" class="resume section">
-
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2> My Resume</h2>
-    <p>Experienced digital marketer and social media strategist skilled in driving brand growth, creating engaging campaigns, and analyzing performance to deliver measurable results. Expert in SEO, content marketing, and audience engagement.</p>
-  </div><!-- End Section Title -->
-
-  <div class="container">
-
-    <div class="row">
-
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-        <h3 class="resume-title">Professional Summary</h3>
-
-        <div class="resume-item pb-0">
-          <h4>Ali Zain</h4>
-          <p><em>Digital marketing professional specializing in social media strategies, content creation, and brand development. Adept at analyzing market trends and creating campaigns that increase engagement and drive conversions.</em></p>
-          <ul>
-            <li>Okara, Punjab Pakistan</li>
-            <li>+92 3053006047</li>
-            <li>zentistoofficial@gmail.com</li>
-          </ul>
-        </div><!-- End Resume Item -->
-
-        <h3 class="resume-title">Education</h3>
-        <div class="resume-item">
-          <h4>BSCS_Ongoing</h4>
-          <h5>2024- 2028</h5>
-          <p><em>University Of Punjab, Lahore</em></p>
-          <p>"Those who work diligently with focus and integrity build lasting success and reputation."</p>
-        </div><!-- End Resume Item -->
-
-        <div class="resume-item">
-          <h4>Digital Marketing Certification</h4>
-          <h5>2023</h5>
-          <p><em>Mera Mustakbil, Okara</em></p>
-          <p>Certified in digital marketing strategies including SEO, social media management, email marketing, and analytics, with hands-on experience in creating campaigns that effectively engage audiences and boost brand presence.</p>
-        </div><!-- End Resume Item -->
-
-      </div>
-
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-        <h3 class="resume-title">Volunteer Experience</h3>
-        <div class="resume-item">
-          <h4>Marketing Volunteer</h4>
-          <h5>2023- Present</h5>
-          <ul>
-            <li>Assisted in creating social media campaigns and content strategies for small businesses.</li>
-            <li>Analyzed campaign performance and suggested improvements to boost engagement and reach.</li>
-            <li>Collaborated with design teams to ensure consistent brand messaging across platforms.</li>
-            <li>Helped organize online promotions and digital events to increase brand awareness.</li>
-          </ul>
-        </div><!-- End Resume Item -->
-
-        <div class="resume-item">
-          <h4>Languages</h4>
-          <p><em>Proficient in communication and fostering collaboration across diverse audiences.</em></p>
-          <ul>
-            <li>Fluent in Urdu, ensuring clear and culturally sensitive communication.</li>
-            <li>Proficient in English for creating content and professional correspondence.</li>
-            <li>Fluent in Punjabi, facilitating smooth communication in local communities.</li>
-            <li>"Language is the roadmap of a culture. It tells you where its people come from and where they are going."<br>— Rita Mae Brown</li>
-          </ul>
-        </div><!-- End Resume Item -->
-
-      </div>
-
+  <!-- Runaway prank sound (optional synth chime) -->
+  <audio id="confettiSound" preload="auto"
+    src="https://assets.mixkit.co/active_storage/sfx/2013/2013-preview.mp3"></audio>
+  <!-- Lightbox Modal for Full Photo Zoom -->
+  <div class="photo-lightbox-modal" id="photoLightbox" onclick="closeLightbox(event)">
+    <div class="lightbox-content-box">
+      <button class="lightbox-close-btn" onclick="closeLightbox(event)">&times;</button>
+      <img id="lightboxImg" class="lightbox-img" src="" alt="Full Photo Preview">
+      <p id="lightboxCaption" class="lightbox-caption"></p>
     </div>
-
   </div>
 
-</section><!-- /Resume Section -->
-
-   
-
-   <!-- Services Section -->
-<section id="services" class="services section">
-
-  <!-- Section Title -->
-  <div class="container section-title aos-init" data-aos="fade-up">
-    <h2>My Services</h2>
-    <p>My services focus on digital marketing, social media growth, and creative campaign strategies to boost online presence and engagement.</p>
-  </div><!-- End Section Title -->
-
-  <div class="container">
-
-    <div class="row gy-4">
-
-      <div class="col-lg-4 col-md-6 aos-init" data-aos="fade-up" data-aos-delay="100">
-        <div class="service-item item-cyan position-relative">
-          <div class="icon">
-            <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-              <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174"></path>
-            </svg>
-            <i class="bi bi-building-fill-gear"></i>
-          </div>
-          <a href="#" class="stretched-link">
-            <h3>Social Media Management</h3>
-          </a>
-          <p>Manage and grow social media profiles to increase engagement, followers, and brand visibility.</p>
-        </div>
-      </div><!-- End Service Item -->
-
-      <div class="col-lg-4 col-md-6 aos-init" data-aos="fade-up" data-aos-delay="200">
-        <div class="service-item item-orange position-relative">
-          <div class="icon">
-            <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-              <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,582.0697525312426C382.5290701553225,586.8405444964366,449.9789794690241,525.3245884688669,502.5850820975895,461.55621195738473C556.606425686781,396.0723002908107,615.8543463187945,314.28637112970534,586.6730223649479,234.56875336149918C558.9533121215079,158.8439757836574,454.9685369536778,164.00468322053177,381.49747125262974,130.76875717737553C312.15926192815925,99.40240125094834,248.97055460311594,18.661163978235184,179.8680185752513,50.54337015887873C110.5421016452524,82.52863877960104,119.82277516462835,180.83849132639028,109.12597500060166,256.43424936330496C100.08760227029461,320.3096726198365,92.17705696193138,384.0621239912766,124.79988738764834,439.7174275375508C164.83382741302287,508.01625554203684,220.96474134820875,577.5009287672846,300,582.0697525312426"></path>
-            </svg>
-            <i class="bi bi-bag-check-fill"></i>
-          </div>
-          <a href="#" class="stretched-link">
-            <h3>Facebook & Instagram Ads</h3>
-          </a>
-          <p>Run targeted ad campaigns to reach your audience, generate leads, and boost sales.</p>
-        </div>
-      </div><!-- End Service Item -->
-
-      <div class="col-lg-4 col-md-6 aos-init" data-aos="fade-up" data-aos-delay="300">
-        <div class="service-item item-teal position-relative">
-          <div class="icon">
-            <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-              <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,541.5067337569781C382.14930387511276,545.0595476570109,479.8736841581634,548.3450877840088,526.4010558755058,480.5488172755941C571.5218469581645,414.80211281144784,517.5187510058486,332.0715597781072,496.52539010469104,255.14436215662573C477.37192572678356,184.95920475031193,473.57363656557914,105.61284051026155,413.0603344069578,65.22779650032875C343.27470386102294,18.654635553484475,251.2091493199835,5.337323636656869,175.0934190732945,40.62881213300186C97.87086631185822,76.43348514350839,51.98124368387456,156.15599469081315,36.44837278890362,239.84606092416172C21.716077023791087,319.22268207091537,43.775223500013084,401.1760424656574,96.891909868211,461.97329694683043C147.22146801428983,519.5804099606455,223.5754009179313,538.201503339737,300,541.5067337569781"></path>
-            </svg>
-            <i class="bi bi-graph-up-arrow"></i>
-          </div>
-          <a href="#" class="stretched-link">
-            <h3>Sales & Conversion Campaigns</h3>
-          </a>
-          <p>Run targeted campaigns designed to generate leads and increase sales effectively.</p>
-        </div>
-      </div><!-- End Service Item -->
-
-      <div class="col-lg-4 col-md-6 aos-init" data-aos="fade-up" data-aos-delay="400">
-        <div class="service-item item-red position-relative">
-          <div class="icon">
-            <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-              <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,503.46388370962813C374.79870501325706,506.71871716319447,464.8034551963731,527.1746412648533,510.4981551193396,467.86667711651364C555.9287308511215,408.9015244558933,512.6030010748507,327.5744911775523,490.211057578863,256.5855673507754C471.097692560561,195.9906835881958,447.69079081568157,138.11976852964426,395.19560036434837,102.3242989838813C329.3053358748298,57.3949838291264,248.02791733380457,8.279543830951368,175.87071277845988,42.242879143198664C103.41431057327972,76.34704239035025,93.79494320519305,170.9812938413882,81.28167332365135,250.07896920659033C70.17666984294237,320.27484674793965,64.84698225790005,396.69656628748305,111.28512138212992,450.4950937839243C156.20124167950087,502.5303643271138,231.32542653798444,500.4755392045468,300,503.46388370962813"></path>
-            </svg>
-            <i class="bi bi-wrench-adjustable"></i>
-          </div>
-          <a href="#" class="stretched-link">
-            <h3>Branding Campaigns</h3>
-          </a>
-          <p>Build a strong online brand identity that resonates with your audience and boosts recognition.</p>
-        </div>
-      </div><!-- End Service Item -->
-<div class="col-lg-4 col-md-6 aos-init" data-aos="fade-up" data-aos-delay="700">
-  <div class="service-item item-yellow position-relative">
-    <div class="icon">
-      <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-        <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,566.797414625762C385.7384707136149,576.1784315230908,478.7894351017131,552.8928747891023,531.9192734346935,484.94944893311C584.6109503024035,417.5663521118492,582.489472248146,322.67544863468447,553.9536738515405,242.03673114598146C529.1557734026468,171.96086150256528,465.24506316201064,127.66468636344209,395.9583748389544,100.7403814666027C334.2173773831606,76.7482773500951,269.4350130405921,84.62216499799875,207.1952322260088,107.2889140133804C132.92018162631612,134.33871894543012,41.79353780512637,160.00259165414826,22.644507872594943,236.69541883565114C3.319112789854554,314.0945973066697,72.72355303640163,379.243833228382,124.04198916343866,440.3218312028393C172.9286146004772,498.5055451809895,224.45579914871206,558.5317968840102,300,566.797414625762"></path>
-      </svg>
-      <i class="bi bi-envelope-fill"></i>
-    </div>
-    <a href="#" class="stretched-link">
-      <h3>Email Marketing Campaigns</h3>
-    </a>
-    <p>Design and manage email campaigns that engage your audience, nurture leads, and drive conversions effectively.</p>
-  </div>
-</div>
-
-      <div class="col-lg-4 col-md-6 aos-init" data-aos="fade-up" data-aos-delay="500">
-        <div class="service-item item-indigo position-relative">
-          <div class="icon">
-            <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-              <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,532.3542879108572C369.38199826031484,532.3153073249985,429.10787420159085,491.63046689027357,474.5244479745417,439.17860296908856C522.8885846962883,383.3225815378663,569.1668002868075,314.3205725914397,550.7432151929288,242.7694973846089C532.6665558377875,172.5657663291529,456.2379748765914,142.6223662098291,390.3689995646985,112.34683881706744C326.66090330228417,83.06452184765237,258.84405631176094,53.51806209861945,193.32584062364296,78.48882559362697C121.61183558270385,105.82097193414197,62.805066853699245,167.19869350419734,48.57481801355237,242.6138429142374C34.843463184063346,315.3850353017275,76.69343916112496,383.4422959591041,125.22947124332185,439.3748458443577C170.7312796277747,491.8107796887764,230.57421082200815,532.3932930995766,300,532.3542879108572"></path>
-            </svg>
-            <i class="bi bi-brush"></i>
-          </div>
-          <a href="#" class="stretched-link">
-            <h3>Canva Design</h3>
-          </a>
-          <p>Create visually compelling social media posts, banners, and creatives to engage and grow your audience.</p>
-        </div>
-      </div><!-- End Service Item -->
-
-    </div>
-
-  </div>
-
-</section><!-- /Services Section -->
-
-
-    <section id="contact" class="contact section">
-
-      <!-- Section Title -->
-      <div class="container section-title aos-init aos-animate" data-aos="fade-up">
-        <h2>Contact Me</h2>
-        <p>"Reach out easily—contact us for any inquiries or assistance."</p>
-      </div><!-- End Section Title -->
-
-      <div class="container aos-init aos-animate" data-aos="fade" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4">
-            <div class="info-item d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
-              <i class="bi bi-geo-alt flex-shrink-0"></i>
-              <div>
-                <h3>Address</h3>
-                <p>Okara, Punjab Pakistan</p>
-              </div>
-            </div><!-- End Info Item -->
-
-            <div class="info-item d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
-              <i class="bi bi-telephone flex-shrink-0"></i>
-              <div>
-                <h3>Call Us</h3>
-                <p>+92 3053006047</p>
-              </div>
-            </div><!-- End Info Item -->
-
-            <div class="info-item d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
-              <i class="bi bi-envelope flex-shrink-0"></i>
-              <div>
-                <h3>Email Us</h3>
-                <p>zentistoofficial@gmail.com</p>
-              </div>
-            </div><!-- End Info Item -->
-
-          </div>
-
-          <div class="col-lg-8">
-            <form action="https://formspree.io/f/movaqwdq" method="post" >
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                </div>
-                <div class="col-md-12 text-center">
-                  <div class="loading" style="display: none;">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message" style="display: none;">Your message has been sent. Thank you!</div>
-                
-
-                  <button type="submit">Send Message</button>
-                </div>
-
-              </div>
-            </form>
-          </div><!-- End Contact Form -->
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-
-
-
-  </main>
-
-  <footer id="footer" class="footer position-relative light-background">
-    <div class="container">
-      <h3 class="sitename">Ali Zain</h3>
-<p>"Empowering brands through creative social media strategies and impactful marketing campaigns."</p>
-      <div class="social-links d-flex justify-content-center">
-       
-        <a href="https://web.facebook.com/zentistoofficial" target="_blank"><i class="bi bi-facebook"></i></a>
-        <a href="https://wa.me/923053006047" target="_blank"><i class="bi bi-whatsapp"></i></a>
-
-       
-       
-    </div>
-    
-      <div class="container">
-        <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">Ali Zain</strong> <span>All Rights Reserved</span>
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by <a href="https://alizain.netlify.app/">Ali Zain</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <div id="preloader">
-    <!-- New loader content -->
-    <div class="spinner">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-</div>
-
-  
-
-  </div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
- 
- 
- 
-
- 
-
-
+  <script src="birthday.js"></script>
 </body>
 
 </html>
